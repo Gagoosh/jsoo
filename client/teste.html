@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="aqui">Você tem <span id="segundos"></span> segundos.</div>
+    <script>
+
+    class Relogio {
+
+        constructor(n, e) {
+            this._segundos = n;
+            this._elemento = e;
+            this._elemento.innerHTML = this._segundos;
+            setInterval(() => {
+                --this._segundos;
+                this._elemento.innerHTML = this._segundos > 0 ? this._segundos : '0';
+              }, 1000);
+        }
+
+    }
+
+    var relogio = new Relogio(3, document.querySelector("#segundos"));
+
+    </script>
+</body>
+</html>
