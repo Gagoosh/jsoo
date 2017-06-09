@@ -1,13 +1,11 @@
 class ListaNegociacoes {
 
-	constructor(trap) {
+	constructor() {
 		this._negociacoes = [];
-		this._trap = trap;
 	}
 
 	adiciona(n){
 		this._negociacoes.push(n);
-		this._trap(this);
 	}
 
 	get negociacoes(){
@@ -15,6 +13,5 @@ class ListaNegociacoes {
 	}
 	esvazia(){
 		this._negociacoes = [];
-		this._trap(this);
 	}
 }
